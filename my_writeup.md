@@ -35,6 +35,7 @@ You're reading it!
 
 
 ![alt text][dh_param]
+
 Parameter | Names | Definitions
 --- | --- | ---
 αi−1 | (twist angle) | Z^i−1 and Z^i measured about X^i−1 in a right-hand sense.
