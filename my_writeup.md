@@ -46,6 +46,15 @@ di | (link offset) | signed distance from X^i−1 to X^i measured along Z^i
 Here is an example of how to include an image in your writeup.
 ![alt text][image1]
 
+DH Steps 1 - 4
+
+i | αi−1 | ai−1 | di | θi
+--- | --- | --- | --- | ---
+1 | 0 | 0 | 0 | 0
+2 | 0 | 0 | 0 | 0
+3 | 0 | 0 | 0 | 0
+4 | 0 | 0 | 0 | 0
+
 #### 2. Using the DH parameter table you derived earlier, create individual transformation matrices about each joint. In addition, also generate a generalized homogeneous transform between base_link and gripper_link using only end-effector(gripper) pose.
 
 Here's | A | Snappy | Table
