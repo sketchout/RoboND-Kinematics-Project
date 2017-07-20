@@ -18,6 +18,7 @@
 [image1]: ./misc_images/misc1.png
 [image2]: ./misc_images/misc2.png
 [image3]: ./misc_images/misc3.png
+[dh_param]: ./misc_images/dh_param.png
 
 ## [Rubric](https://review.udacity.com/#!/rubrics/972/view) Points
 ### Here I will consider the rubric points individually and describe how I addressed each point in my implementation.  
@@ -32,8 +33,8 @@ You're reading it!
 ### Kinematic Analysis
 #### 1. Run the forward_kinematics demo and evaluate the kr210.urdf.xacro file to perform kinematic analysis of Kuka KR210 robot and derive its DH parameters.
 
-[dh_param]: ./misc_images/dh_param.png
 
+![alt text][dh_param]
 Parameter | Names | Definitions
 --- | --- | ---
 αi−1 | (twist angle) | Z^i−1 and Z^i measured about X^i−1 in a right-hand sense.
