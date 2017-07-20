@@ -32,8 +32,14 @@ You're reading it!
 ### Kinematic Analysis
 #### 1. Run the forward_kinematics demo and evaluate the kr210.urdf.xacro file to perform kinematic analysis of Kuka KR210 robot and derive its DH parameters.
 
-Here is an example of how to include an image in your writeup.
+Parameter | Names | Definitions
+--- | --- | ---
+αi−1 | (twist angle) | Z^i−1 and Z^i measured about X^i−1 in a right-hand sense.
+ai−1 | (link length) | distance from Z^i−1 to Z^i measured along X^i−1 where X^i−1 is perpendicular to both Z^i−1 to Z^i
+di | (link offset) | signed distance from X^i−1 to X^i measured along Z^i
+θi | (joint angle) | angle between X^i−1 to X^i measured about Z^i in a right-hand sense.
 
+Here is an example of how to include an image in your writeup.
 ![alt text][image1]
 
 #### 2. Using the DH parameter table you derived earlier, create individual transformation matrices about each joint. In addition, also generate a generalized homogeneous transform between base_link and gripper_link using only end-effector(gripper) pose.
