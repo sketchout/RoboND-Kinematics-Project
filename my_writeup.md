@@ -38,10 +38,10 @@ You're reading it!
 
 Parameter | Names | Definitions
 --- | --- | ---
-αi−1 | (twist angle) | Z^i−1 and Z^i measured about X^i−1 in a right-hand sense.
-ai−1 | (link length) | distance from Z^i−1 to Z^i measured along X^i−1 where X^i−1 is perpendicular to both Z^i−1 to Z^i
-di | (link offset) | signed distance from X^i−1 to X^i measured along Z^i
-θi | (joint angle) | angle between X^i−1 to X^i measured about Z^i in a right-hand sense.
+αi−1 | twist angle | Z^i−1 and Z^i measured about X^i−1 in a right-hand sense.
+ai−1 | link length | distance from Z^i−1 to Z^i measured along X^i−1 where X^i−1 is perpendicular to both Z^i−1 to Z^i
+di | link offset | signed distance from X^i−1 to X^i measured along Z^i
+θi | joint angle | angle between X^i−1 to X^i measured about Z^i in a right-hand sense.
 
 2) Get difference(Δ) from the kr210.urdf.xacro  and calculate the DH parameters
 
