@@ -34,7 +34,7 @@ You're reading it!
 #### 1. Run the forward_kinematics demo and evaluate the kr210.urdf.xacro file to perform kinematic analysis of Kuka KR210 robot and derive its DH parameters.
 
 
-1) Define Parammeters
+1) Define Parameters
 
 Parameter | Names | Definitions
 --- | --- | ---
@@ -43,7 +43,7 @@ ai−1 | (link length) | distance from Z^i−1 to Z^i measured along X^i−1 whe
 di | (link offset) | signed distance from X^i−1 to X^i measured along Z^i
 θi | (joint angle) | angle between X^i−1 to X^i measured about Z^i in a right-hand sense.
 
-2) Get difference from kr210.urdf.xacro  and get parameter
+2) Get difference(Δ) from the kr210.urdf.xacro  and calculate the DH parameters
 
 ![alt text][dh_param_all]
 
