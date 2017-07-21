@@ -18,7 +18,7 @@
 [image1]: ./misc_images/misc1.png
 [image2]: ./misc_images/misc2.png
 [image3]: ./misc_images/misc3.png
-[dh_param]: ./misc_images/dh_param.png
+[dh_param_all]: ./misc_images/dh_param_all.png
 
 ## [Rubric](https://review.udacity.com/#!/rubrics/972/view) Points
 ### Here I will consider the rubric points individually and describe how I addressed each point in my implementation.  
@@ -34,7 +34,7 @@ You're reading it!
 #### 1. Run the forward_kinematics demo and evaluate the kr210.urdf.xacro file to perform kinematic analysis of Kuka KR210 robot and derive its DH parameters.
 
 
-![alt text][dh_param]
+1) Define Parammeters
 
 Parameter | Names | Definitions
 --- | --- | ---
@@ -43,17 +43,10 @@ ai−1 | (link length) | distance from Z^i−1 to Z^i measured along X^i−1 whe
 di | (link offset) | signed distance from X^i−1 to X^i measured along Z^i
 θi | (joint angle) | angle between X^i−1 to X^i measured about Z^i in a right-hand sense.
 
-Here is an example of how to include an image in your writeup.
-![alt text][image1]
+2) Get difference from kr210.urdf.xacro  and get parameter
 
-DH Steps 1 - 4
+![alt text][dh_param_all]
 
-i | αi−1 | ai−1 | di | θi
---- | --- | --- | --- | ---
-1 | 0 | 0 | 0 | 0
-2 | 0 | 0 | 0 | 0
-3 | 0 | 0 | 0 | 0
-4 | 0 | 0 | 0 | 0
 
 #### 2. Using the DH parameter table you derived earlier, create individual transformation matrices about each joint. In addition, also generate a generalized homogeneous transform between base_link and gripper_link using only end-effector(gripper) pose.
 
