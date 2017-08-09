@@ -5,8 +5,8 @@
 ---
 
 1. Set up your ROS Workspace.
-  -- Download robo-nd Virtual Machine Image which include Ubuntu + ROS.
-  -- Run the VM and create "~/create catkin_ws/src folder" that is the ROS workspace.
+  - Download robo-nd Virtual Machine Image which include Ubuntu + ROS.
+  - Run the VM and create "~/create catkin_ws/src folder" that is the ROS workspace.
 
 2. Clone the [project repository](https://github.com/udacity/RoboND-Kinematics-Project) and Download into the ***src*** directory of ROS Workspace.
 3. Experiment with the forward_kinematics environment and get familiar with the robot.
