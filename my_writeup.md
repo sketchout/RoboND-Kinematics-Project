@@ -65,11 +65,11 @@
 
 1) Define [DH Transformation Matrix](https://classroom.udacity.com/nanodegrees/nd209/parts/7b2fd2d7-e181-401e-977a-6158c77bf816/modules/8855de3f-2897-46c3-a805-628b5ecf045b/lessons/91d017b1-4493-4522-ad52-04a74a01094c/concepts/7259f438-36a0-4bc1-ac53-39af669ba3c9) 
     
-            - [def TF_Matrix(alpha, a, d, q)] 
+    - def TF_Matrix(alpha, a, d, q): 
             
 2) Create Individual trnasformation matrices
 
-        - T0_1 = TF_Matrix(alpha0, a0, d1, q1).subs(DH_Table) ~
+    - T0_1 = TF_Matrix(alpha0, a0, d1, q1).subs(DH_Table) ~
         T6_EE = TF_Matrix(alpha6, a6, d7, q7).subs(DH_Table)
 
 #### 3. Decouple Inverse Kinematics problem into Inverse Position Kinematics and inverse Orientation Kinematics; doing so derive the equations to calculate all individual joint angles.
