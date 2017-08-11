@@ -11,10 +11,13 @@
 2. Clone the [project repository](https://github.com/udacity/RoboND-Kinematics-Project) and Download into the ***src*** directory of ROS Workspace.
 3. Experiment with the forward_kinematics environment and get familiar with the robot.
 4. Launch in [demo mode](https://classroom.udacity.com/nanodegrees/nd209/parts/7b2fd2d7-e181-401e-977a-6158c77bf816/modules/8855de3f-2897-46c3-a805-628b5ecf045b/lessons/91d017b1-4493-4522-ad52-04a74a01094c/concepts/ae64bb91-e8c4-44c9-adbe-798e8f688193).
+    - demo flag is true in inverse_kinematics.launch
 
 5. Perform Kinematic Analysis for the robot following the [project rubric](https://review.udacity.com/#!/rubrics/972/view).
+    - Calculate the  DH Parameters
 
 6. Fill in the `IK_server.py` with your Inverse Kinematics code. 
+    - To run IK code change demo flag to false and run "rosrun kuka_aram IK_server.py"
 
 
 [//]: # (Image References)
@@ -67,26 +70,40 @@
     
     - def TF_Matrix(alpha, a, d, q): 
             
-2) Create Individual trnasformation matrices
+2) Create Individual trnasformation matrices (T0_1 ~ T6_EE)
 
     - T0_1 = TF_Matrix(alpha0, a0, d1, q1).subs(DH_Table) ~
         T6_EE = TF_Matrix(alpha6, a6, d7, q7).subs(DH_Table)
 
 #### 3. Decouple Inverse Kinematics problem into Inverse Position Kinematics and inverse Orientation Kinematics; doing so derive the equations to calculate all individual joint angles.
 
-    And here's another image! 
+- Extract End-Effector Rotation Matrix
+- Find Wrist Cetner Location
+- Find Theta 1-3
+- Find Theta 4-6
     
-    ![alt text][image2]
+![alt text][image2]
 
 ### 6. Project Implementation
 
 #### 1. Fill in the `IK_server.py` file with properly commented python code for calculating Inverse Kinematics based on previously performed Kinematic Analysis. Your code must guide the robot to successfully complete 8/10 pick and place cycles. Briefly discuss the code you implemented and your results. 
 
+- Fill in the 'IK_server.py"
+    - DH Parameter Symbols
+    - Joint Angle Symbols
+    - Modified DH Parameters
+    - Modified DH Transformation Matrix
+    - Create Individual Transformation Matrices
+    - Extract End-Effector Position and Orientation
+    - Find End-Effector Rotation Matrix
+    - Find Wrist Center Location
+    - Finding Theta 1-3
+    - Finding Theta 4-6
+- Add the rosrun script to safe_spawner.sh
+    $ rosrun kuka_arm IK_server.py
 
-    Here I'll talk about the code, what techniques I used, what worked and why, where the implementation might fail and how I might improve it if I were going to pursue this project further.  
-    
-    
-    And just for fun, another example image:
-    ![alt text][image3]
+- And test the result with Gazebo and rviz
+
+![alt text][image3]
 
 
