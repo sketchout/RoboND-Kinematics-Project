@@ -81,8 +81,6 @@
 - Find Wrist Cetner Location
 - Find Theta 1-3
 - Find Theta 4-6
-    
-![alt text][image2]
 
 ### 6. Project Implementation
 
@@ -105,5 +103,6 @@
 - And test the result with Gazebo and rviz
 
 ![alt text][image3]
+![alt text][image2]
 
 
