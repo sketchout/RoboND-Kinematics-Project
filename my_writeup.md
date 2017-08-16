@@ -88,18 +88,21 @@
     
     - Define function of the homogeneous transform maxtrix 
     
-        TF = Matrix([[cos(q), -sin(q), 0 , 0],
+            TF = Matrix([[cos(q), -sin(q), 0 , 0],
                 [sin(q)*cos(alpha), cos(q)*cos(alpha), -sin(alpha), -sin(alpha)*d],
                 [sin(q)*sin(alpha), cos(q)*sin(alpha), cos(alpha), cos(alapha)*d],
                 [ 0, 0, 0, 1]])
             
     - Create Individual trnasformation matrices (T0_1 ~ T6_EE)
 
-        - T0_1 = TF_Matrix(alpha0, a0, d1, q1).subs(DH_Table) = TF_Matrix(0, 0, 0.75, q1)
-            = [[cos(q1), -sin(q1), 0 , 0],
-                [sin(q1)*1, cos(q1)*1, 0, 0 ],
-                [0, 0, 1, 1 * 0.75],
-                [0, 0, 0, 1]]
+        - T0_1 = TF_Matrix(alpha0, a0, d1, q1).subs(DH_Table) 
+        
+                T0_1 = TF_Matrix(0, 0, 0.75, q1)
+                    = [[cos(q1), -sin(q1), 0 , 0],
+                    [sin(q1)*1, cos(q1)*1, 0, 0 ],
+                    [0, 0, 1, 1 * 0.75],
+                    [0, 0, 0, 1]]
+                    
         - T1_2 = TF_Matrix(alpha1, a1, d2, q2).subs(DH_Table)
         - T2_3 = TF_Matrix(alpha2, a2, d3, q3).subs(DH_Table)
         - T3_4 = TF_Matrix(alpha3, a3, d4, q4).subs(DH_Table)
@@ -108,22 +111,27 @@
         - T6_EE = TF_Matrix(alpha6, a6, d7, q7).subs(DH_Table)
 
     - Extract End-Effector & Rotation Matrix which is the gripper link position and orientation
-        postion_EE = [[px], [py], [pz]]
-        rotation_EE = RotZ(alpha) * RotY(beta) * RotX(gamma)
+        
+            postion_EE = [[px], [py], [pz]]
+            rotation_EE = RotZ(alpha) * RotY(beta) * RotX(gamma)
+        
     - Get Homogeneoun transform matrix from base_link to gripper_link
-        T0_7 = [ [rotation_EE, position_EE],[0, 0 ,0, 1]]
+        
+            T0_7 = [ [rotation_EE, position_EE],[0, 0 ,0, 1]]
 
 #### 3. Decouple Inverse Kinematics problem into Inverse Position Kinematics and inverse Orientation Kinematics; doing so derive the equations to calculate all individual joint angles.
 
-    - Inverse Position Problem
-        - Find Wrist Center Location 
-            wx = position_EE[0] - d7 * rotation_EE[0, 0]
-            wy = position_EE[1] - d7 * rotation_EE[1, 0]
-            wz = position_EE[2] - d7 * rotation_EE[2, 0]
-            
-        - Find Theta 1-3 (q1 ~ q3)
-            q1 = arctan2(wy, wx)
-        - Find Theta 4-6 (q4 ~ q6)
+- Find Wrist Center Location 
+
+        wx = position_EE[0] - d7 * rotation_EE[0, 0]
+        wy = position_EE[1] - d7 * rotation_EE[1, 0]
+        wz = position_EE[2] - d7 * rotation_EE[2, 0]
+    
+- Find Theta 1-3 (q1 ~ q3)
+
+        q1 = arctan2(wy, wx)
+
+- Find Theta 4-6 (q4 ~ q6)
 
 ### 6. Project Implementation
 
