@@ -84,16 +84,15 @@
         
 #### 2. Using the DH parameter table you derived earlier, create individual transformation matrices about each joint. In addition, also generate a generalized homogeneous transform between base_link and gripper_link using only end-effector(gripper) pose.
 
-1) Define [DH Transformation Matrix](https://classroom.udacity.com/nanodegrees/nd209/parts/7b2fd2d7-e181-401e-977a-6158c77bf816/modules/8855de3f-2897-46c3-a805-628b5ecf045b/lessons/91d017b1-4493-4522-ad52-04a74a01094c/concepts/7259f438-36a0-4bc1-ac53-39af669ba3c9) 
-    
-    - Define function of the homogeneous transform maxtrix 
+
+- Define function of the homogeneous transform maxtrix (def TF_Matrix(alpha,a,d,q))
     
             TF = Matrix([[cos(q), -sin(q), 0 , 0],
                 [sin(q)*cos(alpha), cos(q)*cos(alpha), -sin(alpha), -sin(alpha)*d],
                 [sin(q)*sin(alpha), cos(q)*sin(alpha), cos(alpha), cos(alapha)*d],
                 [ 0, 0, 0, 1]])
             
-    - Create Individual trnasformation matrices (T0_1 ~ T6_EE)
+- Create Individual trnasformation matrices (T0_1 ~ T6_EE)
 
         - T0_1 = TF_Matrix(alpha0, a0, d1, q1).subs(DH_Table) 
         
@@ -110,12 +109,12 @@
         - T5_6 = TF_Matrix(alpha5, a5, d6, q6).subs(DH_Table)
         - T6_EE = TF_Matrix(alpha6, a6, d7, q7).subs(DH_Table)
 
-    - Extract End-Effector & Rotation Matrix which is the gripper link position and orientation
+- Extract End-Effector & Rotation Matrix which is the gripper link position and orientation
         
             postion_EE = [[px], [py], [pz]]
             rotation_EE = RotZ(alpha) * RotY(beta) * RotX(gamma)
         
-    - Get Homogeneoun transform matrix from base_link to gripper_link
+- Get Homogeneoun transform matrix from base_link to gripper_link
         
             T0_7 = [ [rotation_EE, position_EE],[0, 0 ,0, 1]]
 
